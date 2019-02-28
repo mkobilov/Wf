@@ -6,7 +6,7 @@
 int main(int argc, char* argv[])
 {
     char* s;
-    dict* d = dict_create();
+    dict* d = hash_table_create(50);
     if(argc == 1) {
         reader* r = reader_readstdin();
         for(; s != NULL;) {

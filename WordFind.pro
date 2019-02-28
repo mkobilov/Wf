@@ -17,7 +17,8 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += \
         main.cpp \
     reader.cpp \
-    dict.cpp
+    dict.cpp \
+    hash_dict.cpp
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

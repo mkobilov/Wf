@@ -13,7 +13,6 @@ typedef struct reader_{
 
 void reader_destroy()
 {
-    free(r);
 }
 
 char* _reader_getword(reader* r)

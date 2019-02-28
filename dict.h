@@ -11,4 +11,7 @@ typedef struct dict
 
 dict* dict_create();
 
-#endif // DICT_H
+
+dict* hash_table_create (int n_buckets);
+
+#endif
