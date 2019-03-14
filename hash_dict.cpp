@@ -105,3 +105,11 @@ dict* hash_table_create (int n_buckets)
 
     return dtable;
 }
+
+void hash_table_destroy(dict* dtable)
+{
+    hash_table* table = (hash_table*) ((char*) dtable + sizeof(dict));
+
+    free(table->buckets);
+    free(dtable);
+}

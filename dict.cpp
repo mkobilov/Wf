@@ -84,3 +84,17 @@ dict* dict_create()
     d_->lst = NULL;
     return d;
 }
+
+void dict_destroy(dict* d)
+{
+    dict_* d_ = (dict_*) ((char*) d + sizeof(dict));
+    word* tmp;
+    word* cur = d_->fst;
+    while(cur != NULL) {
+        tmp = cur;
+        cur = cur->next;
+
+        free(tmp);
+        free(d);
+    }
+}
